@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement  : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite[] armure = new Sprite[5];
     public float speed = 20;
     private Vector2 motion;
     public Component camera;
@@ -20,6 +22,7 @@ public class PlayerMovement  : MonoBehaviour
         transform.Translate(motion * speed * Time.deltaTime);
         camera.transform.Translate(motion* speed * Time.deltaTime);
         PlayerPosition = (GetComponent<Transform>().position.x, GetComponent<Transform>().position.y);
+        spriteRenderer.sprite = armure[gamemanager.Instance.niveau];
     }
 
     void TakeDamage(int damage){
