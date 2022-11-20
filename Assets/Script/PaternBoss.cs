@@ -6,8 +6,16 @@ public class PaternBoss : MonoBehaviour
 {
     public GameObject player;
     public GameObject laser;
+<<<<<<< Updated upstream
     public float cd_laser = 10;
     public float new_laser = 2;
+=======
+    public GameObject caillou;
+    public float cd_laser = 10;
+    public float new_laser = 2;
+    public float cd_caillou = 3;
+    public float new_caillou = 4;
+>>>>>>> Stashed changes
     public float speed = 3;
     private Vector3 target;
     public int PV = 30;
@@ -62,6 +70,19 @@ public class PaternBoss : MonoBehaviour
            
         }
 
+<<<<<<< Updated upstream
+=======
+        if (Time.time > new_caillou ) {
+            Debug.Log("create caillou");
+            new_caillou += cd_caillou;
+
+            Vector3 position = transform.position;
+            position += new Vector3(0,-2,0);
+           
+            Instantiate(caillou, position, transform.rotation );
+        }
+
+>>>>>>> Stashed changes
         else {
             randomMove();
         }
