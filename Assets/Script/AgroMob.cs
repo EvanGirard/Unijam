@@ -16,14 +16,13 @@ public class AgroMob : MonoBehaviour
     public bool b_move = true;
     public int PV = 4;
     SpriteRenderer _spriteRenderer;
-    string tagName = "Player";
     public GameObject player;
     public float distance;
     public float temp_dist;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag(tagName);
+        player = GameObject.FindGameObjectWithTag("Player");
 
 
     }

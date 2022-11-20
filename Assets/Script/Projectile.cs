@@ -30,6 +30,14 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
             
         }
+
+        if (opponent.gameObject.tag == "Boss") {
+
+            opponent.gameObject.GetComponent<PaternBoss>().PV -= damage;
+            if (opponent.gameObject.GetComponent<PaternBoss>().PV <= 0){
+                opponent.gameObject.GetComponent<PaternBoss>().kill();
+            }
+        }
     }
     
 }

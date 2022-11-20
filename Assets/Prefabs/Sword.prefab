@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fce528e923e6a40937900b2f2d9282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charac: {fileID: 2925686532836804118, guid: 9d22a97f82d085846ba0f7baae3d8d7e, type: 3}
+  charac: {fileID: 0}
   Maincam: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  swordsprite: {fileID: 0}
-  cc: 60
+  spriteRenderer: {fileID: 1975599201696090976}
+  swordsprite: {fileID: 21300000, guid: bf0f40e36b7eeb64e8207aa0e60a7244, type: 3}
+  cc: 200
   projectile: {fileID: 3496205670749820930, guid: 3d33fcbc72961b340ab17bc1233d864a, type: 3}
