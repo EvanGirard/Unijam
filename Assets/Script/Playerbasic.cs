@@ -135,7 +135,7 @@ private Vector3 direcdash;
 
 
     void OnTriggerStay2D(Collider2D collide){
-
+        
         if (collide.gameObject.tag == "Orc") {
         //Debug.Log(collide.gameObject.name);
         collide.gameObject.GetComponent<AgroMob>().b_move = false;
@@ -146,10 +146,27 @@ private Vector3 direcdash;
             //collide.gameObject.GetComponent<AgroMob>().Move(true);
             TakeDamage(damage);
         }
+        } 
+
+        if (collide.gameObject.tag == "Laser" && collide.gameObject.GetComponent<Laser>().chargement == false ) { //
+         Debug.Log(collide.gameObject.name);
+
+            if ( Time.time > next_damage ){
+            next_damage = Time.time + cooldown;
+            int damage = collide.gameObject.GetComponent<Laser>().damage;
+            //collide.gameObject.GetComponent<AgroMob>().Move(true);
+            TakeDamage(damage);
+            Debug.Log("contact laser");
+         }
         }
+    }
+
+
+
+
 
         //collide.gameObject.GetComponent<BallBehaviour>().Print();
-    }
+    
     
     
 
