@@ -11,10 +11,19 @@ public class Laser : MonoBehaviour
     public bool chargement = true;
     public int damage = 3;
     public float lifespan = 8;
-    // Start is called before the first frame update
+    [SerializeField] Playerbasic charac;
+    // Start is called before the first frame updates
     void Start()
     {
         Destroy(gameObject,lifespan);
+        float a = 2*transform.lossyScale.y+transform.position.y-charac.transform.position.y;
+        float b = transform.position.x-charac.transform.position.x;
+        if (b> 0){
+            transform.eulerAngles=new Vector3(0,0,Mathf.Acos(a/(Mathf.Sqrt(a*a+b*b)))/Mathf.PI*180);
+        }
+        else{ 
+            transform.eulerAngles=new Vector3(0,0,-Mathf.Acos(a/(Mathf.Sqrt(a*a+b*b)))/Mathf.PI*180);
+        }
     }
 
     // Update is called once per frame
