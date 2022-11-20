@@ -19,6 +19,8 @@ public class AgroMob : MonoBehaviour
     public GameObject player;
     public float distance;
     public float temp_dist;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,7 @@ public class AgroMob : MonoBehaviour
         PV -= damage;
         if (PV<=0) {
             Destroy(gameObject);
+            SpawnOrcs.NbOrcs -= 1;
         }
     }
 

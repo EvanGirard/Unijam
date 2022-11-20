@@ -11,7 +11,7 @@ public class PlayerMovement  : MonoBehaviour
     public int PV = 12;
     public float next_damage = 0f;
     public float cooldown = 2f;
-
+    static public (float, float) PlayerPosition = (0, 0);
     [SerializeField] Canvas GameOverScreen;
     // Update is called once per frame
     void Update()
@@ -19,7 +19,7 @@ public class PlayerMovement  : MonoBehaviour
         motion = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         transform.Translate(motion * speed * Time.deltaTime);
         camera.transform.Translate(motion* speed * Time.deltaTime);
-
+        PlayerPosition = (GetComponent<Transform>().position.x, GetComponent<Transform>().position.y);
     }
 
     void TakeDamage(int damage){
