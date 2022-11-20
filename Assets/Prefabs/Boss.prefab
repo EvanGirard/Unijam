@@ -15,7 +15,11 @@ GameObject:
   - component: {fileID: 941324179855501071}
   m_Layer: 0
   m_Name: Boss
+<<<<<<< Updated upstream
   m_TagString: Untagged
+=======
+  m_TagString: Boss
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +105,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   laser: {fileID: 7699604802332869930, guid: 4d1040237db413e419b4a3ea1c924b47, type: 3}
+<<<<<<< Updated upstream
   cd_laser: 10
   new_laser: 2
   speed: 3
+=======
+  caillou: {fileID: 2633798875498033675, guid: 1a5ab44634d48a249957638f19226b31, type: 3}
+  cd_laser: 10
+  new_laser: 2
+  cd_caillou: 3
+  new_caillou: 4
+  speed: 3
+  PV: 30
+>>>>>>> Stashed changes
   destinationx: 1
   destinationy: 1
 --- !u!50 &941324179855501056

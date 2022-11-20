@@ -123,7 +123,7 @@ private Vector3 direcdash;
         }
     }
 
-    void TakeDamage(int damage){
+    public void TakeDamage(int damage){
         PV -= damage;
         Debug.Log("took " + damage + "damage");
         Debug.Log("Current HP : " + PV);

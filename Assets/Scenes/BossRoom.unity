@@ -563,10 +563,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 941324179855501069, guid: 2d389af16137a7b4fb7c5fbf0c438749, type: 3}
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 941324179855501070, guid: 2d389af16137a7b4fb7c5fbf0c438749, type: 3}
       propertyPath: player
       value: 
