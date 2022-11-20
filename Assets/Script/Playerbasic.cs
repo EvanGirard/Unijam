@@ -12,6 +12,7 @@ public int leftcorner=-10;
 [SerializeField] GameObject GameOverScreen;
 [SerializeField] Camera Maincam ;
 
+public SpriteRenderer Blinking;
 public SpriteRenderer spriteRenderer;
 /*public Sprite leftsprite;
 
@@ -30,6 +31,8 @@ private int ddash=11;
 public int PV = 12;
 public float next_damage = 0f;
 public float cooldown = 2f;
+bool invincible=false;
+bool clignotement=false;
 
 private Vector3 direcdash;
 
@@ -135,7 +138,12 @@ private Vector3 direcdash;
 
 
     void OnTriggerStay2D(Collider2D collide){
-        
+         if (!clignotement){
+            clignotement=true;
+            StartCoroutine("CharacterBlinking");
+        } 
+          if (!invincible){
+            invincible = true;
         if (collide.gameObject.tag == "Orc") {
         //Debug.Log(collide.gameObject.name);
         collide.gameObject.GetComponent<AgroMob>().b_move = false;
@@ -159,9 +167,20 @@ private Vector3 direcdash;
             Debug.Log("contact laser");
          }
         }
+        }
     }
 
-
+    IEnumerator CharacterBlinking(){
+    for (int i=0; i < 4 ; i+=1){
+        
+        yield return new WaitForSeconds(0.2f);
+        Blinking.color = new Color(1f,1f,1f,0f);
+        yield return new WaitForSeconds(0.2f);
+        Blinking.color = new Color(1f,1f,1f,1f);
+        invincible = false;
+    }
+    clignotement=false;
+    }
 
 
 
