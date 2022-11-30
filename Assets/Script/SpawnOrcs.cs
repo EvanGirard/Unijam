@@ -14,8 +14,8 @@ public class SpawnOrcs : MonoBehaviour
         int y;
         for (int i = 0; i < 4; i++){
             Debug.Log("spawn " + i);
-            x = Random.Range(1,7);
-            y = Random.Range(4,7);
+            x = Random.Range(1,4);
+            y = Random.Range(3,5);
             NbOrcs += 1;
             
             Instantiate(orc, new Vector3(x,y,0), Quaternion.identity  );

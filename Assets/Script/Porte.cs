@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Porte : MonoBehaviour
-{
+{  
+    public SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite[] porte = new Sprite[2];
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +17,11 @@ public class Porte : MonoBehaviour
     {
         float xf = GetComponent<Transform>().position.x;
         float zf = GetComponent<Transform>().position.z;
-        float xp = PlayerMovement.PlayerPosition.Item1;
-        float zp = PlayerMovement.PlayerPosition.Item2;
+        float xp = Playerbasic.PlayerPosition.Item1;
+        float zp = Playerbasic.PlayerPosition.Item2;
         if ((SpawnOrcs.NbOrcs == 0))
-        {  
-            gameObject.SetActive(false);
+        { 
+            spriteRenderer.sprite = porte[1];
             if ((xf - xp) * (xf - xp) + (zf - zp) * (zf - zp) < 9)
             {
                 SceneManager.LoadScene("Main_Scene");

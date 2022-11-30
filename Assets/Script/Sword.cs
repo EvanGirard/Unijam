@@ -5,17 +5,20 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    [SerializeField] private Sprite[] epee = new Sprite[5];
+    [SerializeField] private Sprite[] epee  = new Sprite[5];
     [SerializeField] Transform charac;
     [SerializeField] Camera Maincam ;
     Vector3 currentEulerAngles;
     private int timer=0;
     [SerializeField] int cc=300;
-    [SerializeField] Projectile projectile;
+    [SerializeField] GameObject projectile;
+    public Sprite swordsprite;
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer.sprite = epee[gamemanager.Instance.niveau];
+        //spriteRenderer.sprite = epee[gamemanager.Instance.niveau -1];
+        spriteRenderer.sprite = swordsprite;
+
     }
 
     // Update is called once per frame

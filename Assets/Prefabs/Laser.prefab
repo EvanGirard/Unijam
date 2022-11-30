@@ -44,7 +44,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7699604802332869930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa985b24b755964b880a24fb42cc542, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dd76014f941d25458e7e6ad484ed6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 10aefa26c277ef94cbb41d58d14c8f2b, type: 3}
   - {fileID: 21300000, guid: b41a507263cffbe46945f6c95ac1ef4f, type: 3}
   frame_attack: 0
-  delay_phase: 1
+  delay_phase: 0.2
   next_phase: 0.2
   chargement: 1
   damage: 3
@@ -103,8 +103,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10aefa26c277ef94cbb41d58d14c8f2b, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 34ab472f367a6c64a96033b9cc1b8f4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

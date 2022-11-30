@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Playerbasic : MonoBehaviour
 {
+    
+    [SerializeField] private Sprite[] armure = new Sprite[5];
     public int screenhaut=20;
 public int screenright=20;
 public int bottomcorner=-10;
@@ -26,23 +28,27 @@ private int timer=0;
 [SerializeField] float dash=3f;
 [SerializeField] int dashduration=10;
 private int ddash=11;
-
+static public (float,float) PlayerPosition = (0,0); 
 public int PV = 12;
 public float next_damage = 0f;
 public float cooldown = 2f;
-
+public GameObject gamemanager;
 private Vector3 direcdash;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //gamemanager = GameObject.FindGameObjectWithTag("GameController");
         
+       // spriteRenderer.sprite = armure[gamemanager.GetComponent<gamemanager>().niveau -1];
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         timer++;
         ddash++;
         if (ddash>=dashduration){
@@ -121,6 +127,8 @@ private Vector3 direcdash;
         if (ddash<dashduration){
             transform.position+=direcdash;
         }
+
+        PlayerPosition = (GetComponent<Transform>().position.x, GetComponent<Transform>().position.z);
     }
 
     public void TakeDamage(int damage){

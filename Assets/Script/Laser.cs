@@ -6,8 +6,8 @@ public class Laser : MonoBehaviour
 {
     public Sprite[] sprites;
     public int frame_attack =0;
-    public float delay_phase = 1f;
-    public float next_phase = 0.2f;
+    public float delay_phase;
+    public float next_phase;
     public bool chargement = true;
     public int damage = 3;
     public float lifespan = 8;
@@ -15,6 +15,8 @@ public class Laser : MonoBehaviour
     void Start()
     {
         Destroy(gameObject,lifespan);
+        delay_phase = 0.2f;
+        next_phase = 0.2f;
     }
 
     // Update is called once per frame

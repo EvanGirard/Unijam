@@ -96,12 +96,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2220620955501662053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70ac745ce4f4a04392c36caec605998, type: 3}
+  m_Script: {fileID: 11500000, guid: c48d6a2833124b547858e3bbc33cbd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   piercing: 0
-  lifespan: 0.3
-  speed: 10
+  lifespan: 0.5
+  speed: 50
   damage: 2
 --- !u!50 &-1529303717124430414
 Rigidbody2D:

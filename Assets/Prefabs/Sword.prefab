@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 58702446098446341}
   - component: {fileID: 1975599201696090976}
-  - component: {fileID: 4380341906013619810}
+  - component: {fileID: 2293036294579188030}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4380341906013619810
+--- !u!114 &2293036294579188030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,12 +94,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3111959537489306583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8fce528e923e6a40937900b2f2d9282, type: 3}
+  m_Script: {fileID: 11500000, guid: a232eca945f7f37409818ba118a5e77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1975599201696090976}
+  epee:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   charac: {fileID: 0}
   Maincam: {fileID: 0}
-  spriteRenderer: {fileID: 1975599201696090976}
-  swordsprite: {fileID: 21300000, guid: bf0f40e36b7eeb64e8207aa0e60a7244, type: 3}
-  cc: 200
-  projectile: {fileID: 3496205670749820930, guid: 3d33fcbc72961b340ab17bc1233d864a, type: 3}
+  cc: 150
+  projectile: {fileID: 2220620955501662053, guid: a1df895ef4acf8640b14dc512bf7b47b, type: 3}
+  swordsprite: {fileID: 0}
